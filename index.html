@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+</head>
+</head>
+<body>
+    <div class="hero-video">
+        <video autoplay muted loop id="myVideo">
+            <source src="/IMG/video-1657758062.mp4" type="video/mp4">
+        </video>
+        <header>
+            <nav>
+                <div class="nav-left">
+                    <div id="info">
+                        <i class="bi bi-info-circle"></i>
+                    </div>
+                </div>
+                <div class="nav-center">
+                    <div class="brand-name">
+                        <h1>RESILIENCE</h1>
+                        <p>Signature</p>
+                    </div>
+                </div>
+                <div class="nav-right">
+                    <div id="cart">
+                        <i class="bi bi-cart"></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <div class="hero-content">
+            <section class="hero">
+                <h1>BIENVENIDO A RESILENCE SIGNATURE</h1>
+                <p>Explora nuestra colección.</p>
+                <a href="#" class="cta">Shop Now</a>
+            </section>
+        </div>
+    </div>
+    
+    <style> /* BLOQUE NUMERO 2 */
+        .img-container {
+          display: flex;
+        }
+        .img-box {
+          position: relative;
+          width: 33.33%;
+        }
+        .img-box:before {
+          content: "";
+          float: left;
+          padding-top: 100%;
+        }
+        .img-box img {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          top: 0;
+          left: 0;
+        }
+        .img-text {
+          position: absolute;
+          bottom: 0;
+          color: white;
+         
+          width: 100%;
+          padding: 10px;
+          text-align: center;
+          font-weight: bold;
+          text-shadow: none;
+        }
+    </style>
+      
+    <div class="img-container">
+        <div class="img-box">
+          <img src="/IMG/289663567_405664588157693_624762641540905373_n.jpg" alt="Imagen 1">
+          <div class="img-text">EXPERIENCIA</div>
+        </div>
+        <div class="img-box">
+          <img src="/IMG/290563390_574201430999582_8608299163246325811_n.jpg" alt="Imagen 2">
+          <div class="img-text">MOMENTOS</div>
+        </div>
+        <div class="img-box">
+          <img src="/IMG/291469468_1127068521353114_1681373903741879820_n.jpg" alt="Imagen 3">
+          <div class="img-text">INNOVACIONES</div>
+        </div>
+      </div>
+  
+    
+    <style>
+        .imagen-de-fondo {
+            /* Esto hará que la sección ocupe toda la altura y anchura de la página */
+            width: 100vw; /* 100% del ancho de la ventana */
+            height: 100vh; /* 100% de la altura de la ventana */
+    
+            /* Aquí especificas la URL de tu imagen */
+            background-image: url('/IMG/289663567_405664588157693_624762641540905373_n.jpg');
+    
+            /* Esto centra la imagen en la sección */
+            background-position: center;
+    
+            /* Esto hace que la imagen no se repita */
+            background-repeat: no-repeat;
+    
+            /* Esto hace que la imagen cubra toda la sección, 
+            manteniendo su aspecto (puede que partes de la imagen se recorten) */
+            background-size: cover;
+        }
+    </style>
+    
+    <div class="imagen-de-fondo">
+        <!-- Aquí puedes poner más contenido si lo necesitas -->
+    </div>
+    
+      
+      
+    
+          
+      
+
+
+
+    <main>
+        <section class="products">
+            <!-- Product grid goes here -->
+        </section>
+        <section class="about">
+            <h2>Acerca de nosotros</h2>
+            <p>Marca de ropa on the top.</p>
+        </section>
+    </main>
+
+
+    <footer>
+        <p>&copy; 2023 RESILENCE Signature</p>
+    </footer>
+    <script>
+        window.onload = function() {
+            var text = document.querySelector('.hero h1');
+            var strText = text.textContent;
+            var splitText = strText.split("");
+            text.textContent = "";
+            for(let i = 0; i < splitText.length; i++) {
+                text.innerHTML += "<span>"+ splitText[i] + "</span>";
+            }
+        
+            let char = 0;
+            let timer = setInterval(onTick, 50);
+        
+            function onTick() {
+                const span = text.querySelectorAll('span')[char];
+                span.classList.add('fade');
+                char++
+                if(char === splitText.length){
+                    complete();
+                    return;
+                }
+            }
+        
+            function complete(){
+                clearInterval(timer);
+                timer = null;
+            }
+        };
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/5.0.0-beta1/js/bootstrap.bundle.min.js"></script>  
+</body>
+</html>
